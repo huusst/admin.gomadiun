@@ -974,3 +974,10 @@
     max-height: 500px;
   }
 }
+
+.desk-event {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

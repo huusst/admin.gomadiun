@@ -18,6 +18,7 @@ import TableUsersPengelola from './pages/Users/UsersPengelola';
 import TableDesaWisata from './pages/Destinasi/DesaWisata';
 import TableDetailDesaWisata from './pages/Destinasi/DetailDesawisata';
 import TableDetailWisata from './pages/Destinasi/DetailWisata';
+import TablePengumuman from './pages/Pengumuman';
 
 function App() {
   const navigate = useNavigate();
@@ -75,6 +76,7 @@ function App() {
           <Route path="/wisata" element={<TableWisata role={role} id_admin_login={id_admin_login}/>} />
           <Route path="/kuliner" element={<TableKuliner />} />
           <Route path="/penginapan" element={<TablePenginapan />} />
+          <Route path="/pengumuman" element={<TablePengumuman />} />
           <Route path="/qrcode-scan" element={<QrCodePage />} />
 
           <Route path="/login" element={<LoginPage />} />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faQrcode } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faInfoCircle, faQrcode } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = ({ role }) => {
     const location = useLocation();
@@ -234,6 +234,18 @@ const Sidebar = ({ role }) => {
                         </Link>
                     </li>
                 )}
+
+
+                {(role === 'admin' || role === 'dinas') && (
+
+                    <li className={`nav-item ${location.pathname === '/pengumuman' ? 'active' : ''}`}>
+                        <Link className="nav-link" to="/pengumuman">
+                            <i className="menu-icon">  <FontAwesomeIcon icon={faInfoCircle} /></i>
+                            <span className="menu-title">Pengumuman</span>
+                        </Link>
+                    </li>
+                )}
+
 
             </ul>
         </nav>
